@@ -16,7 +16,7 @@
   color: rgb(40, 216, 46);
   margin-top: 20px;
   font-size: 1.7rem;
-  left: 1490px;
+  left: 1460px;
   cursor: pointer;
 }
 
@@ -25,7 +25,7 @@
   color: rgb(0, 106, 255);
   margin-top: 23px;
   font-size: 1.5rem;
-  left: 1450px;
+  left: 1420px;
   cursor: pointer;
 }
 
@@ -34,7 +34,7 @@
   color: rgb(0, 4, 255);
   margin-top: 20px;
   font-size: 1.7rem;
-  left: 1410px;
+  left: 1380px;
   cursor: pointer;
 }
 

@@ -1,6 +1,6 @@
 <template>
   <div class="formulario">
-    <h2 class="title">Inscrever-se</h2>
+    <h2 class="title">Pagina de Cadastro</h2>
     <input class="int" type="text" v-model="nome" placeholder="Nome">
     <input class="int" type="text" v-model="email" placeholder="Email">
     <input class="int" type="password" v-model="senha" placeholder="Senha">
@@ -23,7 +23,7 @@ export default {
   methods: {
     cadastrar() {
       if (this.nome == '' || this.email == '') {
-        alert('Preencha todos os campos corretamente')
+        alert('Preencha todos os campos corretamente!')
       } else {
         const data = {
           nome: this.nome, email: this.email,
@@ -31,13 +31,9 @@ export default {
         }
         axios.post('http://localhost:3001/api/postar', data)
 
-          .then((response) => {
-            console.log(response)
-          })
-          .catch((error) => {
-            console.log(error)
-          })
-        alert('Cadastrado com sucesso')
+          .then((response) => { console.log(response) })
+          .catch((error) => { console.log(error) })
+          alert('Cadastro realizado com sucesso')
       }
     }
   }
