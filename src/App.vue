@@ -38,7 +38,7 @@
   cursor: pointer;
 }
 
-.home {
+/* .home {
   color: rgb(210, 210, 210);
   font-size: 2rem;
   position: absolute;
@@ -46,8 +46,8 @@
   top: 20px;
   font-family: serif;
   cursor: pointer;
-}
-.home2 {
+} */
+/* .home2 {
   color: rgb(210, 210, 210);
   font-size: 2rem;
   position: absolute;
@@ -73,7 +73,7 @@
   top: 20px;
   font-family: serif;
   cursor: pointer;
-}
+} */
 
 body {
   margin: 0;
@@ -87,7 +87,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background: linear-gradient(#0f0c29, #302b63, #24243e);
+  /* background: linear-gradient(#0f0c29, #302b63, #24243e); */
   min-height: 100vh;
   
 }
@@ -96,12 +96,12 @@ nav {
   padding: 30px;
 }
 
-nav a {
+/* nav a {
   font-weight: bold;
   color: #2c3e50;
-}
+} */
 
-nav a.router-link-exact-active {
+/* nav a.router-link-exact-active {
   color: #42b983;
-}
+} */
 </style>

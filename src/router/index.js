@@ -27,7 +27,7 @@ const routes = [
   { 
     path: '/atualizar/:id',
     name: 'atualizar',
-    // props: true,
+    props: true,
     component: AtualizarProfessor
   },
   {

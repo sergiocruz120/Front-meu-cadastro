@@ -1,11 +1,11 @@
 <template>
   <div class="formulario">
-    <h2 class="title">Pagina de Cadastro</h2>
+    <h2 class="title">Login</h2>
     <input class="int" type="text" v-model="nome" placeholder="Nome">
     <input class="int" type="text" v-model="email" placeholder="Email">
     <input class="int" type="password" v-model="senha" placeholder="Senha">
     <input class="int" type="password" v-model="confirmarSenha" placeholder="Confirmar senha"><br>
-    <button class="but" @click="cadastrar">Cadastrar</button>
+    <button class="but" @click="cadastrar">Entrar</button>
   </div>
 </template>
 
@@ -53,8 +53,8 @@ h2::first-letter {
 
 .but {
   background-color: greenyellow;
-  width: 250px;
-  height: 40px;
+  width: 100px;
+  height: 35px;
   font-size: 20px;
   font-family: serif;
   cursor: pointer;
@@ -65,7 +65,7 @@ h2::first-letter {
 }
 
 .but:hover {
-  background-color: rgb(157, 231, 46);
+  background-color: rgb(148, 218, 43);
 }
 
 .int {

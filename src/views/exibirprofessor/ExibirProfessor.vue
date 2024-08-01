@@ -9,6 +9,7 @@
         <th class="titulo" >Idade</th>
         <th class="titulo" >Formação</th>
         <th class="titulo" >Email</th>
+        <th class="titulo"></th>
       </tr>
       <tr class="tr2" v-for="(professor, index) in professoress" :key="professor.id">
         <td class="dados">{{ index + 1 }}</td>
@@ -17,23 +18,25 @@
         <td class="dados" >{{ professor?.idade }}</td>
         <td class="dados" >{{ professor?.formacao}}</td>
         <td class="dados" >{{ professor?.email }}</td>
-        <router-link class="atualizar" title="Atualizar" :to="'/atualizar/' + professor.id"> <i class="pi pi-pencil"></i></router-link>
+        <td>
+          <router-link class="atualizar" title="Editar" :to="'/atualizar/' + professor.id"> <i class="pi pi-pencil"></i></router-link>
+          <router class="excluir"><i @click="apagar(professor.id)" class="pi pi-trash" title="Excluir"></i></router>
+        </td>
         <!-- <ta class="atualizar"><i class="pi pi-pencil" title="Atualizar"><router-link to="/atualizar"></router-link></i></ta> -->
-        <router class="excluir"><i @click="apagar(professor.id)" class="pi pi-trash" title="Excluir"></i></router>
       </tr>
     </table>
-    <button class="but" @click="buscar">Atualizar</button>  
+    <!-- <button class="but" @click="buscar">Atualizar</button>   -->
   </div>
 </template>
 
 <script>
 
-export default {
-  data: () => {
-    return {
-        id: 0
-    }
-  },
+export default {  
+  // data: () => {
+  //   return {
+  //       id: 0
+  //   }
+  // },
   // Getters são usados na propriedade computed
   computed: {
    professoress() {
@@ -60,6 +63,10 @@ export default {
 .table {
   margin-top: 50px;
   margin-right: 120px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  /* box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px; */
+
 }
 .titulo {
   position: relative;
@@ -68,26 +75,27 @@ export default {
   height: 7vh;
   padding-left: 100px;
   margin-right: 100px;
-  font-size: 20px;
+  font-size: 25px;
+  border-bottom: 1px solid rgb(165, 165, 165);
 }
 
 .dados {
   position: relative;
   right: 35px;
-  color: rgb(216, 216, 216);
+  color: rgb(0, 0, 0);
   font-family: serif;
-  font-size: 15px;
+  font-size: 20px;
   padding-left: 100px;
-  border-top: solid 1px rgb(216, 216, 216);
+  /* border-top: solid 1px rgb(0, 0, 0); */
 }
 .title {
-  color: rgb(216, 216, 216);
+  color: rgb(35, 18, 18);
   font-family: serif;
   padding-top: 20px;
 }
 
 .tr1 {
-  color: rgb(216, 216, 216);
+  color: rgb(19, 13, 13);
   font-family: serif;
   padding-top: 15px;
   font-size: 20px;
@@ -95,10 +103,10 @@ export default {
 }
 
 .tr2 {
-  color: rgb(216, 216, 216);
+  color: rgb(4, 3, 3);
   font-family: serif;
   padding-top: 20px;
-  font-size: 10px;
+  font-size: 20px;
   /* border: solid 1px rgb(216, 216, 216); */
 }
 
@@ -133,7 +141,7 @@ export default {
 } */
 
 .excluir {
-  position: relative;
+  /* position: relative; */
   background-color: rgb(255, 53, 53);
   margin-left: 10px;
   font-size: 15px;
@@ -141,6 +149,7 @@ export default {
   padding: 6px;
   border-radius: 3px;
   top: 16px;
+  margin-right: 15px;
 }
 
 .excluir:hover {
@@ -149,7 +158,7 @@ export default {
 }
 
 .atualizar {
-  position: relative;
+  /* position: relative; */
   background-color: rgb(53, 53, 255);
   margin-left: 10px;
   font-size: 15px;

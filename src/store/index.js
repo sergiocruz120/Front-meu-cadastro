@@ -47,15 +47,22 @@ export default new Vuex.Store({
     },
 
     async fazerCadastro({ commit }, dados) {
-      await axios.post('http://localhost:5000/professor/criar', dados)
-
-      alert('Cadastro realizado com sucesso')
-
-      commit('cadastrar', dados)
-      
-      commit('retornar')
-      
+      try {
+        await axios.post('http://localhost:5000/professor/criar', dados)
+  
+        alert('Cadastro realizado com sucesso')
+  
+        } catch (error) {
+          if (error.response && error.response.status === 400) {
+  
+            commit('setErrorMessage', error.response.data.message)
+        } else {
+            commit('setErrorMessage', 'Ocorreu um erro inesperado. Tente novamente!')
+          }
+          alert('Dado inválido. Preencha corretamente!')
+      }
     },
+
 
     async fazerAtualizacao({ commit }, dados) {
       console.log(dados)
@@ -69,3 +76,5 @@ export default new Vuex.Store({
   },
       plugins: [vuexPersistedState()]
 })
+
+
