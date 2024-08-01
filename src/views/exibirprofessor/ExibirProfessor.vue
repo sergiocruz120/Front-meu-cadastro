@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <h1 class="title">Professores</h1> 
+    <h1 class="title">Professores Cadastrados</h1> 
     <table class="table">
       <tr class="tr1">
         <th class="titulo">N°</th>
@@ -18,7 +18,7 @@
         <td class="dados" >{{ professor?.idade }}</td>
         <td class="dados" >{{ professor?.formacao}}</td>
         <td class="dados" >{{ professor?.email }}</td>
-        <td>
+        <td class="dados" >
           <router-link class="atualizar" title="Editar" :to="'/atualizar/' + professor.id"> <i class="pi pi-pencil"></i></router-link>
           <router class="excluir"><i @click="apagar(professor.id)" class="pi pi-trash" title="Excluir"></i></router>
         </td>
@@ -63,30 +63,29 @@ export default {
 .table {
   margin-top: 50px;
   margin-right: 120px;
-  background-color: rgb(255, 255, 255);
-  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  background-color: rgb(218, 218, 218);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   /* box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px; */
+  /* border-radius: 20px; */
+  margin: 0;
 
 }
 .titulo {
   position: relative;
-  right: 35px;
-  color: rgb(7, 198, 0);
+  color: rgb(92, 213, 114);
   height: 7vh;
   padding-left: 100px;
-  margin-right: 100px;
   font-size: 25px;
-  border-bottom: 1px solid rgb(165, 165, 165);
+  border-bottom: 10px solid rgb(247, 247, 247);
 }
 
 .dados {
   position: relative;
-  right: 35px;
   color: rgb(0, 0, 0);
   font-family: serif;
   font-size: 20px;
   padding-left: 100px;
-  /* border-top: solid 1px rgb(0, 0, 0); */
+  border-top: solid 5px rgb(255, 255, 255); 
 }
 .title {
   color: rgb(35, 18, 18);
@@ -95,11 +94,13 @@ export default {
 }
 
 .tr1 {
-  color: rgb(19, 13, 13);
+  color: rgb(13, 19, 13);
+  background-color: rgb(59, 59, 59);
   font-family: serif;
   padding-top: 15px;
   font-size: 20px;
-  /* border: solid 1px rgb(216, 216, 216); */
+  margin-left: 15px;
+  border-radius: 20px;
 }
 
 .tr2 {
@@ -107,7 +108,6 @@ export default {
   font-family: serif;
   padding-top: 20px;
   font-size: 20px;
-  /* border: solid 1px rgb(216, 216, 216); */
 }
 
 .but {
