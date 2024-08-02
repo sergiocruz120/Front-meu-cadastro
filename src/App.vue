@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <!-- <span class="pi pi-whatsapp"></span>
-    <span class="pi pi-facebook"></span>
-    <span class="pi pi-linkedin"></span> -->
     <nav>
         <router-view />
     </nav>
@@ -38,43 +35,6 @@
   cursor: pointer;
 }
 
-/* .home {
-  color: rgb(210, 210, 210);
-  font-size: 2rem;
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  font-family: serif;
-  cursor: pointer;
-} */
-/* .home2 {
-  color: rgb(210, 210, 210);
-  font-size: 2rem;
-  position: absolute;
-  left: 120px;
-  top: 20px;
-  font-family: serif;
-  cursor: pointer;
-}
-.home3 {
-  color: rgb(210, 210, 210);
-  font-size: 2rem;
-  position: absolute;
-  left: 300px;
-  top: 20px;
-  font-family: serif;
-  cursor: pointer;
-}
-.home4 {
-  color: rgb(210, 210, 210);
-  font-size: 2rem;
-  position: absolute;
-  left: 410px;
-  top: 20px;
-  font-family: serif;
-  cursor: pointer;
-} */
-
 body {
   margin: 0;
 }
@@ -87,7 +47,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  /* background: linear-gradient(#0f0c29, #302b63, #24243e); */
   min-height: 100vh;
   
 }
@@ -96,12 +55,4 @@ nav {
   padding: 30px;
 }
 
-/* nav a {
-  font-weight: bold;
-  color: #2c3e50;
-} */
-
-/* nav a.router-link-exact-active {
-  color: #42b983;
-} */
 </style>

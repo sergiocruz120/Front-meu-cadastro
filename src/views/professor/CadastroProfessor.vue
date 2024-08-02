@@ -41,7 +41,7 @@ export default {
       this.formacao = '',
       this.email = ''
 
-      // this.chamar()
+      this.$router.push('/exibir')
 
         }
     },
@@ -100,6 +100,10 @@ h2::first-letter {
   background-color: rgb(112, 112, 112);
 }
 
+.but:focus {
+  outline: 5px solid rgb(154, 154, 154);
+}
+
 .int {
   font-size: 20px;
   border: solid 2px rgb(216, 216, 216);
@@ -108,6 +112,12 @@ h2::first-letter {
   max-width: 250px;
   margin-top: 80px;
   margin-left: 30px;
+  border-radius: 5px;
+  border: solid 2px rgb(115, 115, 115);
+}
+
+.int:focus {
+  outline: 3px solid rgb(115, 115, 115);
 }
 
 .formulario {

@@ -28,9 +28,9 @@ export default new Vuex.Store({
     cadastrar (state, dados) {
       state.professores.push(dados)
     },
-    retornar (state){
+    retornar (){
 
-      return state.professores
+      return this.professoress
     }
   },
 
@@ -46,30 +46,31 @@ export default new Vuex.Store({
       commit('atualizar', id)
     },
 
-    async fazerCadastro({ commit }, dados) {
+    async fazerCadastro( { dispatch }, dados) {
       try {
         await axios.post('http://localhost:5000/professor/criar', dados)
-  
+       
         alert('Cadastro realizado com sucesso')
   
         } catch (error) {
           if (error.response && error.response.status === 400) {
   
-            commit('setErrorMessage', error.response.data.message)
+            // commit('setErrorMessage', error.response.data.message)
         } else {
-            commit('setErrorMessage', 'Ocorreu um erro inesperado. Tente novamente!')
+            // commit('setErrorMessage', 'Ocorreu um erro inesperado. Tente novamente!')
           }
           alert('Dado inválido. Preencha corretamente!')
       }
+
+      dispatch('getProfessores')
     },
 
 
-    async fazerAtualizacao({ commit }, dados) {
-      console.log(dados)
+    async fazerAtualizacao({ dispatch }, dados) {
       
       await axios.put(`http://localhost:5000/professor/atualizar/${dados.id}`, dados)
-      alert('Atualizado com sucesso')
-      commit('getProfessores', dados)
+      dispatch('getProfessores')
+      alert('Atualização realizada com sucesso!')
     }
   },
   modules: {

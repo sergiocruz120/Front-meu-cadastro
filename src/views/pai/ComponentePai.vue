@@ -1,10 +1,11 @@
 <template>
-  <div>
-    <h1>Componente Pai</h1>
-    <div class="comp">
+  <div class="pai">
+    <!-- <h1>Componente Pai</h1> -->
+    <div class="comp1">
       <atualizarProfessor />
     </div>
-    <div class="comp">
+
+    <div class="comp2">
       <ExibirProfesor />
     </div>
     
@@ -20,19 +21,16 @@ export default {
 </script>
 
 <style>
-h1 {
-  color: white;
+.pai {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.comp {
-  margin-top: 10px;
-  font-size: 1px;
+.comp2 {
+  margin-top: 100px;
 }
 
-@media (max-width: 950px) {
-  .comp {
-    flex-direction: column; /* Muda para layout vertical em telas pequenas */
-  }
-}
 
 </style>

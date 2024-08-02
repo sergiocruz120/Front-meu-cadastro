@@ -11,13 +11,12 @@
     <input class="int" type="text" v-model="dados.email" ><br>
     <button  @click="atualizar" class="but">Salvar</button>
     <div>
-      {{ id }}
+      <!-- {{ id }} -->
     </div>
   </div>
 </template>
 
 <script>
-
 export default {
 
   props: ['id'],
@@ -68,11 +67,11 @@ export default {
        
        this.$router.push('/exibir')
 
-
         }
     },
+
     buscar() {
-      this.$store.dispatch('getProfessores')
+      this.getProfessores()
     }
   }
 }
@@ -109,7 +108,7 @@ h2::first-letter {
 }
 
 .but {
-  background-color: rgb(40, 40, 40);
+  background-color: rgb(47, 47, 47);
   width: 100px;
   height: 35px;
   font-size: 20px;
@@ -126,14 +125,24 @@ h2::first-letter {
   background-color: rgb(72, 72, 72);
 }
 
+.but:focus {
+  outline: 5px solid rgb(132, 132, 132);
+}
+
 .int {
   font-size: 20px;
   border: solid 2px rgb(216, 216, 216);
   color: rgb(12, 12, 12);
-  height: 35px;
+  height: 37px;
   max-width: 250px;
   margin-top: 80px;
   margin-left: 30px;
+  border-radius: 5px;
+  border: solid 2px rgb(139, 139, 139);
+}
+
+.int:focus {
+  outline: 2px solid rgb(70, 70, 70);
 }
 
 .formulario {
