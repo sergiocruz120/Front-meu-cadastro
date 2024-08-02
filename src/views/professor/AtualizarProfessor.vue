@@ -10,12 +10,17 @@
     <label class="lab4" for="Email">Email:</label>
     <input class="int" type="text" v-model="dados.email" ><br>
     <button  @click="atualizar" class="but">Salvar</button>
+    <div>
+      {{ id }}
+    </div>
   </div>
 </template>
 
 <script>
 
 export default {
+
+  props: ['id'],
   data: () => {
     return {
       dados:{
@@ -82,7 +87,7 @@ export default {
 .lab1, .lab2, .lab3, .lab4 {
   position: absolute;
   margin-left: 30px;
-  color: rgb(216, 216, 216);
+  color: rgb(0, 0, 0);
   font-size: 20px;
   font-family: serif;
 }
@@ -92,48 +97,53 @@ h2::first-letter {
 }
 
 .title {
-  color: rgb(216, 216, 216);
+  position: relative;
+  align-items: center;
+  color: rgb(255, 255, 255);
   font-family: serif;
-  padding-top: 20px;
+  background-color: rgb(40, 40, 40);
+  height: 8vh;
+  padding-top: 7px;
+  border-top-left-radius:  10px;
+  border-top-right-radius:  10px;
 }
 
 .but {
-  background-color: rgb(146, 239, 6);
+  background-color: rgb(40, 40, 40);
   width: 100px;
   height: 35px;
   font-size: 20px;
   font-family: serif;
   cursor: pointer;
   margin-top: 50px;
-  border: solid 2px rgb(157, 231, 46);
+  border: solid 2px rgb(31, 31, 31);
   margin-left: 10px;
   border-radius: 5px;
+  color: rgb(255, 255, 255);
 }
 
 .but:hover {
-  background-color: rgb(157, 231, 46);
+  background-color: rgb(72, 72, 72);
 }
 
 .int {
-  font-size: 18px;
+  font-size: 20px;
   border: solid 2px rgb(216, 216, 216);
-  color: rgb(231, 231, 231);
-  height: 30px;
+  color: rgb(12, 12, 12);
+  height: 35px;
   max-width: 250px;
   margin-top: 80px;
   margin-left: 30px;
-  background: linear-gradient(#181341, #302b63, #24243e);
-  border-radius: 5px red; 
 }
 
-/* .formulario {
-  color: rgb(216, 216, 216);
-  max-width: 400px;
-  height: 520px;
-  margin-top: 80px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
-  background: linear-gradient(#1c174e, #302b63, #363691);
-  border-radius: 5px;
+.formulario {
+ position: relative;
+  background-color: rgb(211, 211, 211);
+  width: 1200px;
+  height: 40vh;
+  border-radius: 10px;
+  top: 70px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 
-} */
+}
 </style>

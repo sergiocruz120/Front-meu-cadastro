@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <h1 class="title">Professores Cadastrados</h1> 
+    <!-- <h1 class="title">Professores Cadastrados</h1>  -->
     <table class="table">
       <tr class="tr1">
         <th class="titulo">N°</th>
@@ -25,7 +25,7 @@
         <!-- <ta class="atualizar"><i class="pi pi-pencil" title="Atualizar"><router-link to="/atualizar"></router-link></i></ta> -->
       </tr>
     </table>
-    <!-- <button class="but" @click="buscar">Atualizar</button>   -->
+    <button class="but" @click="buscar">Atualizar</button>  
   </div>
 </template>
 
@@ -61,22 +61,26 @@ export default {
 <style scoped>
 
 .table {
-  margin-top: 50px;
   margin-right: 120px;
   background-color: rgb(218, 218, 218);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  /* box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px; */
-  /* border-radius: 20px; */
-  margin: 0;
-
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .titulo {
+  background-color: rgb(59, 59, 59);
   position: relative;
-  color: rgb(92, 213, 114);
+  color: rgb(255, 255, 255);
   height: 7vh;
-  padding-left: 100px;
+  padding-left: 80px;
   font-size: 25px;
   border-bottom: 10px solid rgb(247, 247, 247);
+}
+
+.titulo:nth-of-type(1) {
+  border-top-left-radius: 10px;
+}
+
+.titulo:nth-of-type(7) {
+  border-top-right-radius: 10px;
 }
 
 .dados {
@@ -84,23 +88,29 @@ export default {
   color: rgb(0, 0, 0);
   font-family: serif;
   font-size: 20px;
-  padding-left: 100px;
+  padding-left: 80px;
   border-top: solid 5px rgb(255, 255, 255); 
 }
+
+.tr2:nth-child(odd) {
+  background-color: #c6c6c6;
+}
+
 .title {
   color: rgb(35, 18, 18);
   font-family: serif;
   padding-top: 20px;
+  border-top-left-radius: 10px;
 }
 
 .tr1 {
-  color: rgb(13, 19, 13);
   background-color: rgb(59, 59, 59);
   font-family: serif;
   padding-top: 15px;
   font-size: 20px;
   margin-left: 15px;
-  border-radius: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .tr2 {
@@ -108,25 +118,30 @@ export default {
   font-family: serif;
   padding-top: 20px;
   font-size: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.tr2:hover {
+  background-color: rgb(162, 162, 162);
 }
 
 .but {
   position: absolute;
-  color: white;
-  left: 50px;
-  top: 50px;
-  background: linear-gradient(#181341, #302b63, #24243e);
+  color: rgb(7, 7, 7);
   width: 120px;
   height: 40px;
   font-size: 20px;
   font-family: serif;
   cursor: pointer;
-  border: solid 2px rgb(216, 216, 216);
+  border: solid 2px rgb(216, 216, 216);  
   border-radius: 5px;
+  bottom: 694px;
+  left: 1300px;
 }
 
 .but:hover {
-  background: rgb(14, 15, 74);
+  background: rgb(164, 164, 164);
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 /* .excluir > i {

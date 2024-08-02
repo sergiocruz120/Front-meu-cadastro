@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <span class="pi pi-whatsapp"></span>
+    <!-- <span class="pi pi-whatsapp"></span>
     <span class="pi pi-facebook"></span>
-    <span class="pi pi-linkedin"></span>
+    <span class="pi pi-linkedin"></span> -->
     <nav>
         <router-view />
     </nav>
@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .pi-whatsapp {
   position: absolute;
   color: rgb(40, 216, 46);
